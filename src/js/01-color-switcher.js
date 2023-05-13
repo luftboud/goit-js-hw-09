@@ -1,4 +1,4 @@
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 const startButton = document.querySelector('[data-start]');
 const stopButton = document.querySelector('[data-stop]');
 let timerId = null;
@@ -13,15 +13,15 @@ function getRandomHexColor() {
 }
 
 function startColourSwitch() {
-    timerId = setInterval(() => {
-      let color = getRandomHexColor();
-      body.style.backgroundColor = color;
-    }, 1000);
-    startButton.disabled = true;
-    stopButton.disabled = false;
+  timerId = setInterval(() => {
+    let color = getRandomHexColor();
+    body.style.backgroundColor = color;
+  }, 1000);
+  startButton.disabled = true;
+  stopButton.disabled = false;
 }
 function stopColourSwitch() {
-    clearInterval(timerId);
-    startButton.disabled = false;
-    stopButton.disabled = true;
+  clearInterval(timerId);
+  startButton.disabled = false;
+  stopButton.disabled = true;
 }

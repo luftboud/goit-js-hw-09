@@ -1,0 +1,14 @@
+button {
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  font-family: monospace;
+  border-radius: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.div {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
