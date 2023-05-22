@@ -15,6 +15,8 @@ const dataSeconds = document.querySelector('[data-seconds]');
 // const
 //disabling button
 startButton.disabled = true;
+
+//input.disabled = false;
 //selected date
 let selectedDate = null;
 
@@ -47,6 +49,7 @@ function checkDate() {
   startButton.disabled = false;
 }
 function startedTimer() {
+  input.disabled = true;
   const timerId = setInterval(() => {
       convertMs(selectedDate - currentDate);
       dataDays.textContent = time.days.toString().padStart(2, "0");

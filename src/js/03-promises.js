@@ -14,7 +14,11 @@ function submitedForm(event) {
   let amount = form.amount.value;
   //let promises = createPromise;
 
-  for (i = 1; i <= amount; i += 1) {
+  if (delay < 0 || step < 0 || amount <= 0) {
+    Notiflix.Notify.warning('Please, enter a proper value');
+    return;
+  }
+  for (let i = 1; i <= amount; i += 1) {
     let position = i;
     createPromise(position, delay)
       .then(() => position, (delay += step))
